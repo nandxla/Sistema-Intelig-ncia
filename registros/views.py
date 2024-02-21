@@ -1,8 +1,18 @@
 from django.shortcuts import render
-
+from .forms import (
+    FornecedorForm,
+)
 
 def home_registros(request):
-    return render(request, 'registros/index.html')
+    return render(request, 'registros/pages/index.html')
 
 def registro_fornecedor(request):
-    return render(request, 'registros/registro_fornecedor.html')
+    
+    form_fornecedor = FornecedorForm()
+    return render(
+        request, 
+        'registros/pages/registro_fornecedor.html',
+        context={
+            "form_fornecedor": form_fornecedor,
+        }
+    )
