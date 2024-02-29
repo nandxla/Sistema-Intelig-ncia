@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     # my apps
     'registros',
+    'home_app'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,9 @@ ROOT_URLCONF = 'sistemas_inteligencias.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

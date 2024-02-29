@@ -1,0 +1,46 @@
+{% extends "global/pages/base.html" %}
+
+{% block body %}
+
+<div class="container">
+
+    <div class="box-links">
+        <div class="box-app-link">
+            <div class="box-icon">
+                <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <div class="box-text">
+                <h1 class="box-title">Registros</h1>
+                <p class="box-paragraph">Aqui você encontrará toda área de registros, forncedor, contratos...</p>
+            </div>
+             
+            <a class="box-link" href="{% url "registros-home" %}">Acessar</a>
+                    
+        </div>
+
+        <div class="box-app-link">
+            <div class="box-icon">
+                <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <div class="box-text">
+                <h1 class="box-title">Alô Manu</h1>
+                <p class="box-paragraph">Aqui você encontrará toda área de registros, forncedor, contratos...</p>
+            </div>        
+        </div>
+
+        <div class="box-app-link">
+            <div class="box-icon">
+                <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <div class="box-text">
+                <h1 class="box-title">Pagamentos</h1>
+                <p class="box-paragraph">Aqui você encontrará toda área de registros, forncedor, contratos...</p>
+            </div>   
+            
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock body %}

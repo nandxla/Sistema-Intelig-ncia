@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "global/pages/base.html" %}
 
-{% include "registros/partials/head.html"  %}
-<body>
-    {% include "registros/partials/header.html" %}
+{% block body %}
 
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form_fornecedor }}
-        <input type="submit" value="Enviar">
-    </form>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form_fornecedor }}
+    <input type="submit" value="Enviar">
+</form>
 
-    {% include "registros/partials/footer.html" %}
-</body>
-</html>
+{% for user in list_users %}
+    <p> {{user}} </p> <br>
+{% endfor %}
+
+{% endblock body %}
